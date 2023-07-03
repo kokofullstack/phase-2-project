@@ -9,7 +9,7 @@ const Home = () => {
     data: blogs,
     isPending,
     error,
-  } = useFetch('http://localhost:8000/blogs');
+  } = useFetch('https://my-json-server.typicode.com/kokofullstack/phase-2-data/blogs/');
   return (
     <div className="home">
       {error && <div>{error}</div>}
