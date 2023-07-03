@@ -10,12 +10,12 @@ const BlogDetails = () => {
     data: blog,
     error,
     isPending,
-  } = useFetch('https://my-json-server.typicode.com/kokofullstack/phase-2-data/blogs/' + id);
+  } = useFetch('https://json-server-template-mn1e.onrender.com/blogs/' + id);
 
   const history = useHistory();
 
   const handleClick = () => {
-    fetch('https://my-json-server.typicode.com/kokofullstack/phase-2-data/blogs/' + blog.id, {
+    fetch('https://json-server-template-mn1e.onrender.com/blogs/' + blog.id, {
       method: 'DELETE',
     }).then(() => {
       history.push('/');
