@@ -21,7 +21,7 @@ const Create = () => {
     {
       /*makes a POST request to a local server*/
     }
-    fetch('http://localhost:8000/blogs', {
+    fetch('https://my-json-server.typicode.com/kokofullstack/phase-2-data/blogs/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(blog),
