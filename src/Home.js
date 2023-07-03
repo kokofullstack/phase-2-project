@@ -2,6 +2,9 @@ import BlogList from './BlogList';
 import useFetch from './useFetch';
 
 const Home = () => {
+  {
+    /* The returned values are destructured from the hook's return value. */
+  }
   const {
     data: blogs,
     isPending,

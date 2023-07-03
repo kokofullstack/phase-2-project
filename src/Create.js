@@ -1,17 +1,26 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const Create = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
   const [author, setAuthor] = useState('Maung');
-  const [isPending, setIsPending] = useState('false');
-
+  const [isPending, setIsPending] = useState(false);
+  {
+    /*Four state variables are declared using the useState hook*/
+  }
+  const history = useHistory();
   const handleSubmit = (event) => {
     event.preventDefault();
     const blog = { title, body, author };
+    {
+      /*creates a blog object using the current values of title, body, and author, and sets isPending to true*/
+    }
 
     setIsPending(true);
-
+    {
+      /*makes a POST request to a local server*/
+    }
     fetch('http://localhost:8000/blogs', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -19,6 +28,10 @@ const Create = () => {
     }).then(() => {
       console.log('new blog added');
       setIsPending(false);
+      history.push('/');
+      {
+        /*go back to home page*/
+      }
     });
   };
 
@@ -33,6 +46,7 @@ const Create = () => {
           value={title}
           onChange={(event) => setTitle(event.target.value)}
         />
+        {/* Updates the title state variable */}
         <label>Blog body:</label>
         <textarea
           required
@@ -47,7 +61,9 @@ const Create = () => {
           <option value="Maung">Maung</option>
           <option value="Ko Ko">Ko Ko</option>
         </select>
+
         {!isPending && <button>Add Blog</button>}
+        {/* Displays the "Add Blog" button if isPending is false*/}
         {isPending && <button disabled>Adding Blog...</button>}
       </form>
     </div>

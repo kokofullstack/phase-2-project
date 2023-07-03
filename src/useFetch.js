@@ -7,13 +7,18 @@ const useFetch = (url) => {
 
   useEffect(() => {
     const abortCont = new AbortController();
-
+    {
+      /*Makes a fetch request to the specified URL*/
+    }
     fetch(url, { signal: abortCont.signal })
       .then((res) => {
         if (!res.ok) {
           throw Error('Could not fetch the data for that resource');
         }
         return res.json();
+        {
+          /* Converts the response to JSON format*/
+        }
       })
       .then((data) => {
         setData(data);
@@ -28,7 +33,9 @@ const useFetch = (url) => {
           setError(err.message);
         }
       });
-
+    {
+      /*Cleans up by aborting the fetch operation */
+    }
     return () => abortCont.abort();
   }, [url]);
 
