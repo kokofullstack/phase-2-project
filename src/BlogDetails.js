@@ -10,12 +10,12 @@ const BlogDetails = () => {
     data: blog,
     error,
     isPending,
-  } = useFetch('http://localhost:8000/blogs/' + id);
+  } = useFetch('https://my-json-server.typicode.com/kokofullstack/phase-2-data/blogs/' + id);
 
   const history = useHistory();
 
   const handleClick = () => {
-    fetch('http://localhost:8000/blogs/' + blog.id, {
+    fetch('https://my-json-server.typicode.com/kokofullstack/phase-2-data/blogs/' + blog.id, {
       method: 'DELETE',
     }).then(() => {
       history.push('/');
