@@ -53,9 +53,13 @@ This will start the development server and open the website in your default brow
 The fake JSON server provides the following API endpoints:
 
 GET /blogs: Retrieves all blog posts.
+
 GET /blogs/:id: Retrieves a specific blog post by ID.
+
 POST /blogs: Creates a new blog post.
+
 DELETE /blogs/:id: Deletes a specific blog post by ID.
+
 
 #Customization
 
