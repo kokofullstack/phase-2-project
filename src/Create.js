@@ -4,7 +4,11 @@ const Create = () => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
   const [author, setAuthor] = useState('Maung');
-  const handleSubmit = (event) => {};
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const blog = { title, body, author };
+    console.log(blog);
+  };
 
   return (
     <div className="create">
