@@ -9,7 +9,7 @@ const Home = () => {
     data: blogs,
     isPending,
     error,
-  } = useFetch('https://json-server-template-mn1e.onrender.com/blogs/');
+  } = useFetch('https://json-server-template-61g8.onrender.com/blogs/');
   return (
     <div className="home">
       {error && <div>{error}</div>}
