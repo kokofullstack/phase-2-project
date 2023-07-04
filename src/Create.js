@@ -21,7 +21,7 @@ const Create = () => {
     {
       /*makes a POST request to a local server*/
     }
-    fetch('https://json-server-template-mn1e.onrender.com/blogs/', {
+    fetch('https://json-server-template-61g8.onrender.com/blogs/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(blog),
