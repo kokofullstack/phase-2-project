@@ -10,12 +10,12 @@ const BlogDetails = () => {
     data: blog,
     error,
     isPending,
-  } = useFetch('https://json-server-template-mn1e.onrender.com/blogs/' + id);
+  } = useFetch('https://json-server-template-61g8.onrender.com/blogs/' + id);
 
   const history = useHistory();
 
   const handleClick = () => {
-    fetch('https://json-server-template-mn1e.onrender.com/blogs/' + blog.id, {
+    fetch('https://json-server-template-61g8.onrender.com/blogs/' + blog.id, {
       method: 'DELETE',
     }).then(() => {
       history.push('/');
