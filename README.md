@@ -1,6 +1,6 @@
 # Blog Website with Create and Delete Functionality
 
-This is a simple blog website that allows users to create and delete blog posts. The website is connected to a fake JSON server to handle data storage and retrieval. This ReadMe file will guide you through the setup and usage of the website.
+This is a simple blog website that allows users to create and delete blog posts. The website is connected to a JSON server to handle data storage and retrieval. This ReadMe file will guide you through the setup and usage of the website.
 
 ## Features
 
@@ -61,7 +61,7 @@ This will start the development server and open the website in your default brow
 
 ## API Endpoints
 
-The fake JSON server provides the following API endpoints:
+The JSON server provides the following API endpoints:
 
 - `GET /blogs`: Retrieves all blog posts.
 - `GET /blogs/:id`: Retrieves a specific blog post by ID.
