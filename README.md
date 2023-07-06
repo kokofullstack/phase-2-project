@@ -9,6 +9,9 @@ This is a simple blog website that allows users to create and delete blog posts.
 - Delete individual blog posts.
 - Data is stored and retrieved from a fake JSON server.
 
+##Walkthrough GIF
+![](https://github.com/kokofullstack/phase-2-project/blob/main/public/ezgif.com-video-to-gif.gif)
+
 ## Live Website
 
 You can access the live version of the website hosted on Netlify: [https://blogs-2023.netlify.app/](https://blogs-2023.netlify.app/)
